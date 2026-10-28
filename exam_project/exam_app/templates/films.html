@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>ფილმების სია</title>
+</head>
+<body>
+    <h1>ფილმების სია</h1>
+
+    {% for film in films %}
+        <h2>{{ film.name }}</h2>
+        <p>რეიტინგი: {{ film.IMBD }}</p>
+
+        {% if film.IMBD > 8 %}
+            <p>კარგი ფილმია</p>
+        {% else %}
+            <p>სტანდარტული ფილმია</p>
+        {% endif %}
+
+    {% endfor %}
+
+</body>
+</html>
